@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{274E128A-26D8-4AE2-8C9C-9943D0CC3459}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EPiAbstractions</RootNamespace>
+    <AssemblyName>EPiAbstractions</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EPiServer, Version=6.0.530.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\EPiServer\CMS\6.0.530.0\bin\EPiServer.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.BaseLibrary, Version=6.0.530.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\EPiServer\CMS\6.0.530.0\bin\EPiServer.BaseLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="EPiServer.Configuration, Version=6.0.530.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files (x86)\EPiServer\CMS\6.0.530.0\bin\EPiServer.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CacheManagerFacade.cs" />
+    <Compile Include="Core\IPageReferenceFacade.cs" />
+    <Compile Include="Core\PageReferenceFacade.cs" />
+    <Compile Include="DataAbstraction\CategoryFacade.cs" />
+    <Compile Include="DataAbstraction\FrameFacade.cs" />
+    <Compile Include="DataAbstraction\ICategoryFacade.cs" />
+    <Compile Include="DataAbstraction\IFrameFacade.cs" />
+    <Compile Include="DataAbstraction\IPageDefinitionFacade.cs" />
+    <Compile Include="DataAbstraction\IPageVersionFacade.cs" />
+    <Compile Include="DataAbstraction\IScheduledJobFacade.cs" />
+    <Compile Include="DataAbstraction\ITabDefinitionFacade.cs" />
+    <Compile Include="DataAbstraction\PageDefinitionFacade.cs" />
+    <Compile Include="DataAbstraction\ScheduledJobFacade.cs" />
+    <Compile Include="DataAbstraction\TabDefinitionFacade.cs" />
+    <Compile Include="DataFactoryFacade.cs" />
+    <Compile Include="Filters\FilterForVisitorFacade.cs" />
+    <Compile Include="Filters\IFilterForVisitorFacade.cs" />
+    <Compile Include="Helpers\PageDataCollectionHelper.cs" />
+    <Compile Include="ICacheManagerFacade.cs" />
+    <Compile Include="IDataFactoryFacade.cs" />
+    <Compile Include="DataAbstraction\IPageTypeFacade.cs" />
+    <Compile Include="DataAbstraction\PageTypeFacade.cs" />
+    <Compile Include="DataAbstraction\ILanguageBranchFacade.cs" />
+    <Compile Include="DataAbstraction\LanguageBranchFacade.cs" />
+    <Compile Include="DataAbstraction\PageVersionFacade.cs" />
+    <Compile Include="Personalization\ISubscriptionFacade.cs" />
+    <Compile Include="Personalization\SubscriptionFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Security\IVirtualRolesFacade.cs" />
+    <Compile Include="Security\VirtualRolesFacade.cs" />
+    <Compile Include="Web\Hosting\IUnifiedDirectoryFacade.cs" />
+    <Compile Include="Web\Hosting\IUnifiedFileFacade.cs" />
+    <Compile Include="DataAbstraction\IUnifiedPathInfoFacade.cs" />
+    <Compile Include="Web\Hosting\UnifiedDirectoryFacade.cs" />
+    <Compile Include="Web\Hosting\UnifiedFileFacade.cs" />
+    <Compile Include="DataAbstraction\UnifiedPathInfoFacade.cs" />
+    <Compile Include="Web\IPermanentLinkMapStoreFacade.cs" />
+    <Compile Include="Web\PermanentLinkMapStoreFacade.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
