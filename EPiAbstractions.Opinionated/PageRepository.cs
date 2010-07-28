@@ -111,11 +111,20 @@ namespace EPiAbstractions.Opinionated
             dataFactory.Delete(pageData.PageLink, true, AccessLevel.NoAccess);
         }
 
+        /// <summary>
+        /// Gets all of the page's ancestors such as it's parent, grandparent etc.
+        /// </summary>
         public IEnumerable<PageReference> GetAncestors(PageData pageData)
         {
             return dataFactory.GetParents(pageData.PageLink);
         }
 
+        /// <summary>
+        /// Gets descendents (children, grandchildren etc) of a page filtered by access rights and publication status.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="pageLink"></param>
+        /// <returns></returns>
         public IEnumerable<T> GetDescendentsAccessibleToCurrentUser<T>(PageReference pageLink) where T : PageData
         {
             return filterForVisitor.Filter(dataFactory.GetDescendents(pageLink)
