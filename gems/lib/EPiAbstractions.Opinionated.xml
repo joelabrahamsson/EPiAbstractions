@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EPiAbstractions.Opinionated</name>
+    </assembly>
+    <members>
+        <member name="M:EPiAbstractions.Opinionated.IPageRepository.Save(EPiServer.Core.PageData,EPiServer.DataAccess.SaveAction)">
+            <summary>
+            Saves the page without checking that the user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.IPageRepository.Publish(EPiServer.Core.PageData)">
+            <summary>
+            Saves and publishes the page without checking that the user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.IPageRepository.Delete(EPiServer.Core.PageData)">
+            <summary>
+            Deletes the specified page even if it is being linked by other pages. Does not check that the
+            user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.PageRepository.Save(EPiServer.Core.PageData,EPiServer.DataAccess.SaveAction)">
+            <summary>
+            Saves the page without checking that the user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.PageRepository.Publish(EPiServer.Core.PageData)">
+            <summary>
+            Saves and publishes the page without checking that the user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.PageRepository.Delete(EPiServer.Core.PageData)">
+            <summary>
+            Deletes the specified page even if it is being linked by other pages. Does not check that the
+            user has the necessary access rights.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.PageRepository.GetAncestors(EPiServer.Core.PageData)">
+            <summary>
+            Gets all of the page's ancestors such as it's parent, grandparent etc.
+            </summary>
+        </member>
+        <member name="M:EPiAbstractions.Opinionated.PageRepository.GetDescendentsAccessibleToCurrentUser``1(EPiServer.Core.PageReference)">
+            <summary>
+            Gets descendents (children, grandchildren etc) of a page filtered by access rights and publication status.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="pageLink"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
