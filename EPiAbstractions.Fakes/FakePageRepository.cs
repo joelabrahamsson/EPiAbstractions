@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using EPiAbstractions.FixtureSupport;
 using EPiAbstractions.Helpers;
 using EPiAbstractions.Opinionated;
 using EPiServer.Core;
@@ -63,7 +64,7 @@ namespace EPiAbstractions.Fakes
 
         public T GetDefaultPageData<T>(PageReference parentPageLink) where T : PageData
         {
-            throw new NotImplementedException();
+            return CreatePage.OfType<T>().ThatIs().ChildOf(parentPageLink);
         }
 
         public T GetDefaultPageData<T>(PageReference parentPageLink, ILanguageSelector selector) where T : PageData
