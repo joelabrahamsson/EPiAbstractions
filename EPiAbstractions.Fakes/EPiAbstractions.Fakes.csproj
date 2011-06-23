@@ -39,15 +39,15 @@
   <ItemGroup>
     <Reference Include="EPiServer, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\EPiServer\EPiServer.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\EPiServer\CMS\6.1.379.0\bin\EPiServer.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.BaseLibrary, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\EPiServer\EPiServer.BaseLibrary.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\EPiServer\CMS\6.1.379.0\bin\EPiServer.BaseLibrary.dll</HintPath>
     </Reference>
     <Reference Include="EPiServer.Configuration, Version=6.1.379.0, Culture=neutral, PublicKeyToken=8fe83dea738b45b7, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\libs\EPiServer\EPiServer.Configuration.dll</HintPath>
+      <HintPath>C:\Program Files (x86)\EPiServer\CMS\6.1.379.0\bin\EPiServer.Configuration.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
