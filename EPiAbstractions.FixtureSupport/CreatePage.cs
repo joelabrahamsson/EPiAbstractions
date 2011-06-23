@@ -1,6 +1,4 @@
-﻿using System;
-using Castle.Core.Interceptor;
-using Castle.DynamicProxy;
+﻿using Castle.DynamicProxy;
 using EPiServer.Core;
 using EPiServer.SpecializedProperties;
 
@@ -41,7 +39,7 @@ namespace EPiAbstractions.FixtureSupport
         private static T CreateInstanceOfClass<T>(params object[] constructorArguments)
         {
             var proxyGenerator = new ProxyGenerator();
-            return (T) proxyGenerator.CreateClassProxy(typeof (T), new IInterceptor[] {}, constructorArguments);
+            return (T) proxyGenerator.CreateClassProxy(typeof (T), constructorArguments, new IInterceptor[] {});
 
         }
     }
