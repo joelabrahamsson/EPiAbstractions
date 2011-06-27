@@ -147,5 +147,15 @@ namespace EPiAbstractions.Opinionated
 
             return page != null;
         }
+
+        ///<summary>
+        /// Moves a page under another parent
+        ///</summary>
+        ///<param name="page">The page to be moved</param>
+        ///<param name="newParent">The new parent</param>
+        public void Move(PageReference page, PageReference newParent)
+        {
+            dataFactory.Move(page, newParent);
+        }
     }
 }

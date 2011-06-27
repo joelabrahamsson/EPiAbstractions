@@ -141,5 +141,12 @@ namespace EPiAbstractions.Fakes
 
             return page != null;
         }
+
+        public void Move(PageReference fromPage, PageReference newParent)
+        {
+            var page = GetPage<PageData>(fromPage);
+            page["PageParentLink"] = newParent;
+
+        }
     }
 }

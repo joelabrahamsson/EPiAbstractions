@@ -47,5 +47,12 @@ namespace EPiAbstractions.Opinionated
         IEnumerable<T> GetDescendentsAccessibleToCurrentUser<T>(PageReference pageLink)  where T : PageData;
 
         bool TryGetPage<T>(PageReference pageLink, out T page) where T : PageData;
+
+        ///<summary>
+        /// Moves a page under another parent
+        ///</summary>
+        ///<param name="page">The page to be moved</param>
+        ///<param name="newParent">The new parent</param>
+        void Move(PageReference page, PageReference newParent);
     }
 }

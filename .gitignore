@@ -1,0 +1,8 @@
+*.suo
+*.user
+/TestResults
+*.vspscc
+*.vssscc
+*ReSharper*
+bin/
+obj/
